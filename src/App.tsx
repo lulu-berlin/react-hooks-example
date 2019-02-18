@@ -1,28 +1,20 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {useEffect} from 'react';
+import {Example1} from './Example1';
+// import {Example2} from './Example2';
+// import {Example3} from './Example3';
+// import {Example4} from './Example4';
 import './App.css';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
-}
+const App: React.FC<{}> = () => {
+  useEffect(() => {
+    console.log(`bla bla bla: ${Math.random() * 10000 | 0}`);
+  });
+
+  return (
+    <div className="App">
+      <Example1 />
+    </div>
+  );
+};
 
 export default App;
